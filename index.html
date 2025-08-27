@@ -10,15 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        .hero-bg {
-            background-image: linear-gradient(to right, #013223 0%, #006747 50%, #013223 100%);
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
+    <link rel="stylesheet" href="scripts & styles/styles.css">
 </head>
 
 <body class="bg-gray-100 mx-w[1200px] m-auto">
@@ -33,7 +25,10 @@
         <div class="flex items-center space-x-4">
             <span id="heart-count" class="flex items-center">❤️ 0</span>
             <span id="coin-count" class="flex items-center">💰 <span id="coin-value">100</span></span>
-            <span id="copy-count" class="flex items-center">📋 <span id="copy-value">0</span></span>
+            <button id="copy-button"
+                class="flex items-center py-1 px-5 bg-green-600 text-white rounded-md hover:bg-green-700 transition-colors text-sm font-bold">
+                <span id="copy-value" class="ml-1">0</span>
+            </button>
         </div>
     </nav>
 
@@ -233,7 +228,7 @@
         </aside>
     </main>
     
-    <script src="app.js"></script>
+    <script src="./scripts & styles/app.js"></script>
     </body>
     
     </html>
