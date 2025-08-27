@@ -4,6 +4,9 @@
 
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #f5fff6cb !important;
+            /* max-width: 1200px !important; */
+            /* margin: 0 auto !important; */
         }
 
         ::selection {
