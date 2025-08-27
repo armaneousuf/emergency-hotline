@@ -4,7 +4,6 @@ const copyCount = document.getElementById("copy-value");
 const callHistory = document.getElementById("call-history-list");
 const clearBtn = document.getElementById("clear-history-btn");
 
-
 let coins = 100;
 let hearts = 0;
 let copies = 0;
