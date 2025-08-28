@@ -27,7 +27,6 @@ function addCall(serviceName, number) {
 
   const historyItem = document.createElement("div");
 
-
   historyItem.classList.add("bg-gray-100", "p-3", "rounded-md", "shadow-sm");
 
   historyItem.innerHTML = `
