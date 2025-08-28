@@ -15,13 +15,35 @@ function updateDisplay() {
   copyCount.innerText = copies;
 }
 
+// ADDED TIME
 function addCall(serviceName, number) {
-  const p = document.createElement("p");
-  p.innerText = serviceName + " (" + number + ")";
-  callHistory.prepend(p);
+  const now = new Date();
+  const timeString = now.toLocaleTimeString([], {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true,
+  });
+
+  const historyItem = document.createElement("div");
+
+
+  historyItem.classList.add("bg-gray-100", "p-3", "rounded-md", "shadow-sm");
+
+  historyItem.innerHTML = `
+    <div class="flex justify-between items-start">
+      <div>
+        <h4 class="font-semibold text-gray-800">${serviceName}</h4>
+        <p class="text-sm text-gray-500">${number}</p>
+      </div>
+      <span class="text-xs text-gray-500">${timeString}</span>
+    </div>
+  `;
+
+  callHistory.prepend(historyItem);
 }
 
-// Heart buttons
+// HEART BUTTONS FUNCTIONALITY
 const allHearts = document.getElementsByClassName("heart-btn");
 for (const btn of allHearts) {
   btn.addEventListener("click", function () {
@@ -65,4 +87,5 @@ clearBtn.addEventListener("click", function () {
   callHistory.innerHTML = "";
   alert("History cleared!");
 });
+
 updateDisplay();
